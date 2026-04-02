@@ -20,13 +20,13 @@ app.use(morgan("dev"));
 app.get("/", (_req, res) => {
   res.json({
     ok: true,
-    message: "ECE ExamHub API is running",
+    message: "ECE Prep API is running",
     health: "/api/health",
   });
 });
 
 app.get("/api/health", (_req, res) => {
-  res.json({ ok: true, service: "ECE ExamHub API" });
+  res.json({ ok: true, service: "ECE Prep API" });
 });
 
 app.use("/api/auth", authRoutes);
