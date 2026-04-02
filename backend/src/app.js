@@ -17,6 +17,14 @@ app.use(
 app.use(express.json());
 app.use(morgan("dev"));
 
+app.get("/", (_req, res) => {
+  res.json({
+    ok: true,
+    message: "ECE ExamHub API is running",
+    health: "/api/health",
+  });
+});
+
 app.get("/api/health", (_req, res) => {
   res.json({ ok: true, service: "ECE ExamHub API" });
 });
