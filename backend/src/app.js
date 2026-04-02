@@ -8,9 +8,32 @@ import aiRoutes from "./routes/aiRoutes.js";
 
 const app = express();
 
+const configuredOrigins = (process.env.FRONTEND_URL || "")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
+const allowedOrigins = new Set([
+  "http://localhost:5173",
+  "http://localhost:3000",
+  ...configuredOrigins,
+]);
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: (origin, callback) => {
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      const isAllowedVercelDomain = /\.vercel\.app$/i.test(new URL(origin).hostname);
+
+      if (allowedOrigins.has(origin) || isAllowedVercelDomain) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("CORS origin not allowed"));
+    },
     credentials: true,
   }),
 );
