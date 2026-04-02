@@ -1,0 +1,10 @@
+<svg width="240" height="70" viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="10" width="48" height="48" rx="12" fill="#0f766e"/>
+  <path d="M16 28 L28 24 L40 28 L40 44 L28 40 L16 44 Z" fill="white"/>
+  <circle cx="28" cy="34" r="2.5" fill="#0f766e"/>
+  <line x1="28" y1="34" x2="35" y2="30" stroke="#0f766e" stroke-width="1.8"/>
+  <circle cx="35" cy="30" r="2" fill="#0f766e"/>
+  <line x1="28" y1="36" x2="28" y2="42" stroke="#0f766e" stroke-width="2"/>
+  <polygon points="28,46 24,41 32,41" fill="#0f766e"/>
+  <text x="65" y="42" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#0f766e">ExamPrep</text>
+</svg>
