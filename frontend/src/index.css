@@ -72,6 +72,35 @@ body {
   color: #2dd4bf !important;
 }
 
+.theme-dark .resource-card-header .text-slate-900 {
+  color: #0f172a !important;
+}
+
+.theme-dark .resource-card-header .resource-card-title,
+.theme-dark .resource-card-header .resource-card-description,
+.theme-dark .resource-card-header .resource-card-date {
+  color: #0f172a !important;
+}
+
+.theme-dark .resource-card-header .text-slate-800 {
+  color: #1e293b !important;
+}
+
+.theme-dark .resource-card-header .text-slate-700,
+.theme-dark .resource-card-header .text-slate-600,
+.theme-dark .resource-card-header .text-slate-500 {
+  color: #334155 !important;
+}
+
+.theme-dark .resource-card-header .resource-card-chip {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+.theme-dark .resource-card-header .resource-card-chip-text {
+  color: #0f172a !important;
+}
+
 .theme-dark .border-slate-200,
 .theme-dark .border-slate-300 {
   border-color: #334155 !important;

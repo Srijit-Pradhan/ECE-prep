@@ -55,24 +55,24 @@ const ResourceCard = ({ resource, onUpvote, onDownload, onPreview }) => {
   };
 
   return (
-    <article className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
-      <div className="border-b border-slate-100 bg-linear-to-r from-slate-50 to-white px-5 py-4">
+    <article className="resource-card overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
+      <div className="resource-card-header border-b border-slate-100 bg-linear-to-r from-slate-50 to-white px-5 py-4">
         <div className="flex items-start justify-between gap-3">
-          <p className="inline-flex items-center rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-800">
+          <p className="resource-card-type inline-flex items-center rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-800">
             {resource.type}
           </p>
-          <p className="shrink-0 text-xs text-slate-500">{new Date(resource.createdAt).toLocaleDateString()}</p>
+          <p className="resource-card-date shrink-0 text-xs text-slate-500">{new Date(resource.createdAt).toLocaleDateString()}</p>
         </div>
 
-        <h3 className="mt-3 text-xl font-semibold leading-tight text-slate-900">{resource.title}</h3>
-        <p className="mt-2 text-sm leading-6 text-slate-600">{resource.description}</p>
+        <h3 className="resource-card-title mt-3 text-xl font-semibold leading-tight text-slate-900">{resource.title}</h3>
+        <p className="resource-card-description mt-2 text-sm leading-6 text-slate-600">{resource.description}</p>
 
-        <div className="mt-4 flex flex-wrap gap-2 text-xs text-slate-500">
-          <span className="rounded-full border border-slate-200 bg-white px-3 py-1">
-            Uploaded by <span className="font-semibold text-slate-700">{resource.uploadedBy?.name || "Unknown"}</span>
+        <div className="resource-card-meta mt-4 flex flex-wrap gap-2 text-xs text-slate-500">
+          <span className="resource-card-chip rounded-full border border-slate-200 bg-white px-3 py-1">
+            Uploaded by <span className="resource-card-chip-text font-semibold text-slate-700">{resource.uploadedBy?.name || "Unknown"}</span>
           </span>
           {resource.semester && (
-            <span className="rounded-full border border-slate-200 bg-white px-3 py-1">Semester {resource.semester}</span>
+            <span className="resource-card-chip rounded-full border border-slate-200 bg-white px-3 py-1">Semester {resource.semester}</span>
           )}
         </div>
       </div>
