@@ -83,7 +83,7 @@ const ResourceCard = ({ resource, onUpvote, onDownload, onPreview }) => {
             type="button"
             onClick={() => onPreview?.(resource)}
             disabled={!resource?.fileURL}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
+            className="btn-secondary inline-flex w-full rounded-xl px-4 py-2.5 text-sm disabled:cursor-not-allowed disabled:opacity-50"
           >
             <Eye size={16} />
             Preview PDF
@@ -92,7 +92,7 @@ const ResourceCard = ({ resource, onUpvote, onDownload, onPreview }) => {
           <button
             type="button"
             onClick={() => onDownload(resource)}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700"
+            className="btn-primary inline-flex w-full rounded-xl px-4 py-2.5 text-sm"
           >
             <Download size={16} />
             Download PDF
@@ -103,7 +103,7 @@ const ResourceCard = ({ resource, onUpvote, onDownload, onPreview }) => {
           <button
             type="button"
             onClick={() => onUpvote(resource._id)}
-            className="inline-flex items-center justify-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-100"
+            className="btn-chip inline-flex items-center justify-center gap-2 rounded-xl px-3 py-2 text-sm"
           >
             <ArrowBigUp size={16} />
             {resource.upvotes || 0}
@@ -132,7 +132,7 @@ const ResourceCard = ({ resource, onUpvote, onDownload, onPreview }) => {
               type="button"
               onClick={handleGenerateSummary}
               disabled={summaryLoading}
-              className="rounded-lg bg-teal-600 px-3 py-1.5 text-xs font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
+              className="btn-primary rounded-lg px-3 py-1.5 text-xs"
             >
               {summaryLoading ? "Generating..." : "AI Summary"}
             </button>
@@ -166,7 +166,7 @@ const ResourceCard = ({ resource, onUpvote, onDownload, onPreview }) => {
               type="button"
               onClick={handleAskAi}
               disabled={doubtLoading}
-              className="rounded-lg bg-slate-900 px-3 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
+              className="btn-primary rounded-lg px-3 py-2 text-sm"
             >
               {doubtLoading ? "Asking..." : "Ask AI"}
             </button>

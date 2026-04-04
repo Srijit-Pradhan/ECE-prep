@@ -236,7 +236,7 @@ const SubjectPage = () => {
                 type="button"
                 onClick={handleGeneratePracticeQuestions}
                 disabled={practiceLoading}
-                className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
+                className="btn-primary rounded-xl px-4 py-2 text-sm"
               >
                 {practiceLoading ? "Generating..." : "Generate Practice Questions"}
               </button>
@@ -311,10 +311,8 @@ const SubjectPage = () => {
                     key={type.value}
                     type="button"
                     onClick={() => handleTypeSelect(type.value)}
-                    className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                      selectedType === type.value
-                        ? "bg-teal-600 text-white shadow-sm"
-                        : "border border-slate-300 bg-white text-slate-700 hover:bg-slate-50"
+                    className={`btn-chip rounded-full px-4 py-2 text-sm ${
+                      selectedType === type.value ? "btn-chip-active shadow-sm" : ""
                     }`}
                   >
                     {type.label}
@@ -379,7 +377,7 @@ const SubjectPage = () => {
                     type="button"
                     onClick={handlePrevPage}
                     disabled={!pageInfo.hasPrevPage || loading}
-                    className="rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="btn-secondary rounded-lg px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Previous
                   </button>
@@ -387,7 +385,7 @@ const SubjectPage = () => {
                     type="button"
                     onClick={handleNextPage}
                     disabled={!pageInfo.hasNextPage || loading}
-                    className="rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="btn-secondary rounded-lg px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     Next
                   </button>

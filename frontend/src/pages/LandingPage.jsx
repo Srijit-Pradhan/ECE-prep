@@ -74,7 +74,7 @@ const LandingPage = () => {
         <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-10">
           <div className="grid gap-8 lg:grid-cols-[1.3fr_0.9fr] lg:items-center">
             <div>
-              <p className="inline-block rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-teal-800">
+              <p className="inline-block rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-teal-500">
                 Community Driven ECE Prep
               </p>
 
@@ -90,7 +90,7 @@ const LandingPage = () => {
                 <button
                   type="button"
                   onClick={() => scrollToSection("download-notes-section")}
-                  className="rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
+                  className="rounded-full border border-slate-300 bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
                 >
                   Download Notes
                 </button>
